@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.analizadorlexico.HelloController">
+   <children>
+      <TextArea fx:id="text1" layoutX="27.0" layoutY="34.0" prefHeight="278.0" prefWidth="498.0" />
+      <TableView fx:id="tbl1" layoutX="568.0" layoutY="31.0" prefHeight="339.0" prefWidth="278.0">
+        <columns>
+          <TableColumn fx:id="colum1" prefWidth="101.0" text="Palabra" />
+          <TableColumn fx:id="colum2" prefWidth="100.0" text="Tipo" />
+            <TableColumn fx:id="colum3" prefWidth="76.0" text="NoFila" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCal" layoutX="55.0" layoutY="334.0" mnemonicParsing="false" onAction="#calcular" prefHeight="36.0" prefWidth="94.0" text="calcular" />
+      <Button fx:id="btnLimpiar" layoutX="250.0" layoutY="334.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="36.0" prefWidth="94.0" text="Limpiar" />
+   </children>
+</AnchorPane>
