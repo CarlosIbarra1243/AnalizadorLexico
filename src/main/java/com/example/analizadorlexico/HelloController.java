@@ -27,6 +27,8 @@ public class HelloController implements Initializable {
     private TableColumn colum3;
 
     @FXML
+    private TableColumn colum4;
+    @FXML
     private TableView<Datos> tbl1;
 
     @FXML
@@ -55,7 +57,8 @@ public class HelloController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         colum1.setCellValueFactory(new PropertyValueFactory<>("palabra"));
         colum2.setCellValueFactory(new PropertyValueFactory<>("tipo"));
-        colum3.setCellValueFactory(new PropertyValueFactory<>("noFila"));
+        colum3.setCellValueFactory(new PropertyValueFactory<>("noColum"));
+        colum4.setCellValueFactory(new PropertyValueFactory<>("noFila"));
     }
 
     @FXML
@@ -88,13 +91,13 @@ public class HelloController implements Initializable {
 
         //verificando tipo
         if(palabrasReservadas.contains(cadena)){
-            tbl1.getItems().add(new Datos(cadena, "Reservada", fila));
+            tbl1.getItems().add(new Datos(cadena, "Reservada", 1,fila));
         } else if (simbolos.contains(cadena)) {
-            tbl1.getItems().add(new Datos(cadena, "Simbolo", fila));
+            tbl1.getItems().add(new Datos(cadena, "Simbolo",1, fila));
         } else if (variable.matcher(cadena).matches()) {
-            tbl1.getItems().add(new Datos(cadena, "variable", fila));
+            tbl1.getItems().add(new Datos(cadena, "variable",1, fila));
         }else if (numero.matcher(cadena).matches()) {
-            tbl1.getItems().add(new Datos(cadena, "numero", fila));
+            tbl1.getItems().add(new Datos(cadena, "numero",1, fila));
         } else System.out.println("No es fila: " + String.valueOf(fila));
     }
 

@@ -5,10 +5,13 @@ public class Datos {
     String tipo;
     int noFila;
 
-    public Datos(String palabra, String tipo, int noFila) {
+    int noColum;
+
+    public Datos(String palabra, String tipo, int noColum, int noFila) {
         this.palabra = palabra;
         this.tipo = tipo;
         this.noFila = noFila;
+        this.noColum = noColum;
     }
 
     public String getPalabra() {
@@ -33,5 +36,13 @@ public class Datos {
 
     public void setNoFila(int noFila) {
         this.noFila = noFila;
+    }
+
+    public int getNoColum() {
+        return noColum;
+    }
+
+    public void setNoColum(int noColum) {
+        this.noColum = noColum;
     }
 }
