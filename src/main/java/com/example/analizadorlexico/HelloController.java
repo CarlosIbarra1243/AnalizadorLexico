@@ -137,5 +137,7 @@ public class HelloController implements Initializable {
     protected void limpiar(){
         tbl1.getItems().clear();
         text1.clear();
+        lineaG = "";
+        cadenaG = "";
     }
 }
